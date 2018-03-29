@@ -22,6 +22,7 @@ public class JavaApplication1 {
         System.out.print("Masukan Jumlah Deret Fibonacci : ");
         int n = show.nextInt();
         long fib[] = new long[n];
+        long sumF = 0;
          
         fib[0] = 1;
         fib[1] = 1;
@@ -29,8 +30,10 @@ public class JavaApplication1 {
         for(int i = 2; i < n; i++) {
             fib[i] = fib[i-1] + fib[i-2];
         }
+        
         for (int i = 0; i < n; i++) {
-            System.out.print(fib[i] +  " ");
+            sumF = sumF + fib[i];
         }
+        System.out.println(sumF);
     }  
 }
